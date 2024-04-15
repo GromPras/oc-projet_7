@@ -1,0 +1,6 @@
+data/
+documents/
+.vscode/
+solutions/
+src/venv/
+src/__pycache__/
