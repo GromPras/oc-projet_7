@@ -4,25 +4,25 @@ from timeit import timeit
 
 # calculate profit for each action
 actions = []
-# with open("../data/actions_list.json", "r") as json_file:
-#     data = json.load(json_file)
-#     actions = data["actions"]
+with open("../data/actions_list.json", "r") as json_file:
+    data = json.load(json_file)
+    actions = data["actions"]
 
-with open("../data/dataset1_Python+P7.csv", "r") as file:
-    data = csv.reader(file, delimiter=",")
-    line_count: int = 0
-    for row in data:
-        if line_count == 0:
-            line_count = line_count + 1
-        else:
-            if float(row[1]) > 0:
-                actions.append(
-                    {
-                        "action": row[0],
-                        "cost": float(row[1]),
-                        "profit": float(row[2]),
-                    }
-                )
+# with open("../data/dataset2_Python+P7.csv", "r") as file:
+#     data = csv.reader(file, delimiter=",")
+#     line_count: int = 0
+#     for row in data:
+#         if line_count == 0:
+#             line_count = line_count + 1
+#         else:
+#             if row[0] and float(row[1]) > 0:
+#                 actions.append(
+#                     {
+#                         "action": row[0],
+#                         "cost": float(row[1]),
+#                         "profit": float(row[2]),
+#                     }
+#                 )
 
 
 @timeit
